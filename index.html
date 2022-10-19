@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EP0XZP7NL7"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
-    <meta name="keywords" content="ga, IT관련블로그, 경영정보">
-    <meta name="author" content="Ko chaeyoung"
-    <title> Welcome to chaeyoung's Site</title>
+    gtag('config', 'G-EP0XZP7NL7');
+    </script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+        <meta name="keywords" content="ga, IT관련블로그, 경영정보">
+        <meta name="author" content="Ko chaeyoung">
+        <title> Welcome to chaeyoung's Site</title>
+        <script src="https://kit.fontawesome.com/4695eae1e7.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./css/mystyle.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <style>
+            section{
+              display: flex;
+            }
+            .content{
+              flex: 4;
+            }
+            aside{
+             flex: 1;
+            }
+        </style>
 </head> 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EP0XZP7NL7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-EP0XZP7NL7');
-</script>
 <body>
     <!-- header+nav+section>article*3+aside^footer -->
     <header id="home">
-         <img src="./images/logo.jpg" alt="CI">
-        <h1>  chae young Site</h1>
+        <i class="fa-brands fa-apple"></i>
+         <h1>chae young Site</h1>
     </header>
     <nav>
         <!--ui>li*4{메인메뉴$$}-->
@@ -36,13 +49,14 @@
     </nav>
 
     <section>
+        <div class="content">
         <article> 
-            <div class="bigdate">
-                <img src="./images/bigdata.jpg" alt="메인이미지" width="50%">
+            <div class="bigdata">
+                <img src="./images/bigdata.jpg" class="w3-circle alt=" 메인이미지 width="50%">
             </div>
             <div class="action">
                 <h2> 나의 대외활동 이력</h2>
-                <table border="1">
+                <table  class="w3-table-all w3-hoverable">
                     <tr>
                         <th>기간</th>
                         <th>대외활동내용</th>
@@ -67,15 +81,16 @@
                 
             </div>
         </article>
+
         <article>
         <br><br>
             <div class="media">
                 <h2> 좋아하는 음악</h2>
                 <audio src="./media/music01.mp3" controls></audio>
                 <h2> 북극곰 환경을 살리자 </h2>
-                <video src="./media/movie.mp4" controls width="20%"></video>
-                <h2> 발라드 노래</h2>
-                <iframe width="20%" height="500" src="https://www.youtube.com/embed/6q4DSKFn_k8" title="🍂 가을 냄새가 물씬 풍기는 가을 감성 노래 모음 | PLAYLIST" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></iframe>
+                <video src="./media/movie.mp4" controls width="40%"></video>
+                <h2> 신나는 노래</h2>
+                <iframe width="50%" height="500" src=https://youtu.be/hr2xGbc6jO0 title="이하이(LeeHi)의 킬링보이스를 라이브로!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></iframe>
             </div>
         </article>
         <article>
@@ -83,15 +98,33 @@
                 <iframe width="70%" height="400" src="./galley.html" frameborder="0"></iframe>
             </div>
         </article>
+        </div>
 
         <aside> 
-            <div class="link">
-               <a href="http://mis.deu.ac.kr">경영정보학과 사이트</a> <br>
+            <div class="link" >
+               <a href="http://mis.deu.ac.kr" target="_blank">경영정보학과 사이트</a> <br>
                <a href="./galley.html">갤러리</a> <br>
                <a href="#home">시작이동</a>
             </div>
+            <div class="login">
+                <h2> 로그인</h2>
+                <form action="#" >
+                    회원ID<input type="text" class="w3-input" name="id" id=""> <br>
+                    비밀번호 <input type="password" class="w3-input" name="pw" id=""> <br>
+                    남자 <input type="radio"  name="gender" vaule="1" id="">
+                    여자 <input type="radio" name="gender" vaule="2" id=""><br>
+                    <input type="submit" class="w3-button w3-khaki" value="로그인"> 
+                    <input type="reset" class="w3-button w3-khaki"  value="재설정"> <br>
+                </form>
+            </div>
         </aside>
     </section>
-    <footer> 저작권과 주소</footer>
+    <footer> 저작권과 주소
+        <div class="sns">
+          <a href="http://instagram.com/kkccyy_610">
+          <i class="fa-brands fa-instagram"></i></a>
+          <i class="fa-brands fa-facebook"></i>
+        </div>
+    </footer>
 </body>
 </html>
